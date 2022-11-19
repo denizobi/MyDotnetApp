@@ -1,0 +1,21 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+
+@{
+    ViewData["Title"] = "İlk Page";
+}
+
+@{
+    var mybag = ViewBag.name;
+}
+<div class="text-center">
+    <h1 class="display-4">Welcome 1st</h1><p>@mybag</p>
+    <p>Yaş @ViewData["age"] yolun yarısı eder!</p>
+    @foreach (var item in ViewData["names"] as List<string>)
+    {
+        <span>@item </span>
+    }
+    <br />
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>
